@@ -1,0 +1,16 @@
+import React from "react"
+import Footer from "./Footer"
+import MainComponent from "./MainComponent"
+import Header from "./Header"
+
+function App() {
+    return (
+        <div>
+            <Header />
+            <MainComponent />
+            <Footer />
+        </div>
+    )
+}
+
+export default App
