@@ -1,8 +1,9 @@
 import React from 'react'
+import MainContent from "./MainContent"
 
 function App(){
     return (
-        <h1>Hello World</h1>
+        <MainContent />
     )
 }
 
