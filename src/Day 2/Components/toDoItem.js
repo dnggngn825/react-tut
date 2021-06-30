@@ -4,13 +4,12 @@ import style from "../index.css";
 function ToDoItem(props) {
     console.log(props)
     return (
-        <div className="todo-item">
-            <input type="checkbox" />
+        <div className="todo-item" >
+            <input type="checkbox" checked={props.info.completed}/>
             {/* <label for="option1"> I have a bike</label> */}
-            <div className= "todo-info-div">
-                <p>Action: {props.info.name}</p>
-                <p>Time: {props.info.time}</p>
-                <p>Date: {props.info.date} </p>
+            <div className= "todo-info-div" >
+                <p>Task: {props.info.text}</p>
+                {/* <p>Not Completed</p> */}
             </div>
         </div>
     );
