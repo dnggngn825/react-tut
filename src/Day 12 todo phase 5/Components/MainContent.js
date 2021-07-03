@@ -39,16 +39,27 @@ class MainContent extends React.Component {
     constructor() {
         super()
         this.state = {
-            todoL: [] 
+            todoL: todoData
         }
+        this.HandleChange = this.HandleChange.bind(this)
+    }
+
+    // function to handle change when being clicked
+    HandleChange(id)
+    {
+        this.setState((prevState) => {
+            // let target = id
+            const newlist = prevState.todoL.map(item => item)
+            newlist[id-1].completed = !newlist[id-1].completed
+            return {todoL: newlist}
+        })
     }
 
     render() {
-        const todoList = todoData.map(item => <ToDoItem key={item.id} info={item} />)
-        this.state.todoL = todoList
+        const todoList = this.state.todoL.map(item => <ToDoItem key={item.id} info={item} passFunction={this.HandleChange} />)
         return (
             <div className="todo-list">
-                {this.state.todoL}
+                {todoList}
             </div>
         )
     }

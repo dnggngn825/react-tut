@@ -1,6 +1,6 @@
 import React from 'react'
 
-import MainContent from '../Day 10 todo phase 4/Components/MainContent'
+import MainContent from './Components/MainContent'
 
 class App extends React.Component {
     render() {
